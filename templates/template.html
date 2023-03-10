@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Code Generator</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+    </head>
+    <body class="testbox">
+        <form method="post">
+            <div class="banner" style="background:url({{'../static/header.jpg'}})">
+                <h1>Code Generator</h1>
+                <br />
+                <h5 style="margin-top: 120px;">
+                    {% if output %}
+                    <p style="color: white !important;">{{ output }}</p>
+                    {% endif %}
+                </h5>
+            </div>
+
+            <div class="item">
+                <label for="code_type">Code Type:</label>
+                <select name="code_type" id="code_type">
+                    <option value="">-- Select a code type --</option>
+                    <option value="numerical">Numerical</option>
+                    <option value="alphanumerical">Alphanumerical</option>
+                </select>
+                <br />
+            </div>
+            <div class="item">
+                <label for="code_length">Code Length:</label>
+                <input type="number" name="code_length" id="code_length" min="1" max="10" required /><br />
+            </div>
+            <div class="item">
+                <label for="num_codes">Number of Codes:</label>
+                <input type="number" name="num_codes" id="num_codes" min="1" max="2000000" required /><br />
+            </div>
+            <div class="btn-block">
+                <button type="submit">Generate Codes</button>
+            </div>
+        </form>
+    </body>
+</html>
