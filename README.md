@@ -1,4 +1,4 @@
-## Alphanumeric Code Generator 👻
+## Code Generator 👻
 
 This is a simple Flask web application that generates random codes of a given length and type (either numerical or alphanumeric). The generated codes are saved to a text file in the output directory with a timestamped filename.
 
